@@ -1,4 +1,5 @@
 # Node modules
+node_modules/
 chat-server/node_modules/
 
 # OS files
@@ -15,4 +16,7 @@ npm-debug.log*
 
 # SSL certificates (don't commit these!)
 chat-server/ssl/
+
+# Build files
+*.zip
 

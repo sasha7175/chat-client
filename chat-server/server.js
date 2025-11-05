@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
           <strong>✅ HTTP Endpoint:</strong> <a href="${httpUrl}">${httpUrl}</a> (best WebSocket compatibility)
         </div>
         `;
-  const gamePath = '/games/10-networked/chat-client/index.html';
+  const gamePath = '/index.html';
   
   res.send(`
     <html>
@@ -86,13 +86,11 @@ app.get('/', (req, res) => {
   `);
 });
 
-// Serve the repository root so existing /lib and other assets remain available.
-// This makes it convenient to run the server from the chat-room folder while
-// still using shared assets in the repo (e.g., /lib/spine-phaser.min.js).
-const repoRoot = path.resolve(__dirname, '../../..');
-app.use(express.static(repoRoot));
+// Serve the chat-client folder directly from chat-server directory
+// This allows the server to work when deployed standalone
+app.use(express.static(path.join(__dirname, 'chat-client')));
 
-// Also serve the local public folder under the server root (chat-room client)
+// Also serve the local public folder under the server root
 app.use(express.static(path.join(__dirname, 'public')));
 
 const server = http.createServer(app);
