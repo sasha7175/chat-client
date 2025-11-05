@@ -1,8 +1,28 @@
+# Dependencies (will be installed in container)
 node_modules
 npm-debug.log
+
+# Git files
 .git
 .gitignore
+
+# Documentation
 *.md
+README.md
+DEPLOYMENT.md
+
+# Environment files
 .env
+.env.local
+.env.*.local
+
+# SSL certificates (use platform-provided SSL)
 ssl/
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Test files
+test-client.js
 
