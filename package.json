@@ -1,0 +1,22 @@
+{
+  "name": "phaser-spine-chatroom",
+  "version": "0.1.0",
+  "description": "Minimal Phaser + Spine-capable chatroom (server + client)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server-local.js",
+    "test": "node test-client.js"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "author": "VariantExperiments",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0",
+    "ws": "^8.13.0"
+  }
+}
